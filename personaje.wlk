@@ -41,7 +41,14 @@ object personaje {
 	}
 	
 	method vender(){
-		oroAcumulado = (plantasCosechadas.map{planta => planta.valor()}).sum()
+		oroAcumulado = oroAcumulado + (plantasCosechadas.map{planta => planta.valor()}).sum()
 		plantasCosechadas.clear()
+		game.say(self, "Vendi mis plantas recolectadas")
 	}
+
+	method informar(){
+		//game.say(self , "algo")
+		game.say(self, "Tengo " + oroAcumulado +", y "+ plantasCosechadas.size() + " plantas para vender" )
+	}
+
 }
