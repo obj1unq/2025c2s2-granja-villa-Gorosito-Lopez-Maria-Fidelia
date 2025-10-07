@@ -48,7 +48,7 @@ object personaje {
 
 	method informar(){
 		//game.say(self , "algo")
-		game.say(self, "Tengo " + oroAcumulado +"monedas, y "+ plantasCosechadas.size() + " plantas para vender" )
+		game.say(self, "Tengo " + oroAcumulado +" monedas, y "+ plantasCosechadas.size() + " plantas para vender" )
 	}
 
 }

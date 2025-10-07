@@ -2609,3 +2609,6 @@
 {"level":"info","message":"⌛ Validating personaje.wlk","timeElapsed":109,"timestamp":"2025-10-07T16:25:31.928Z"}
 {"level":"info","message":"⌛ Validating personaje.wlk","timeElapsed":113,"timestamp":"2025-10-07T16:25:32.051Z"}
 {"level":"info","message":"⌛ Validating personaje.wlk","timeElapsed":106,"timestamp":"2025-10-07T16:25:32.158Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed game.farmville on c:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia","timeElapsed":65795,"timestamp":"2025-10-07T16:26:15.842Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mgame.farmville\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia\u001b[39m\u001b[23m","ok":true,"timeElapsed":474,"timestamp":"2025-10-07T16:26:18.675Z"}
+{"level":"info","message":"⌛ Validating personaje.wlk","timeElapsed":130,"timestamp":"2025-10-07T16:26:38.401Z"}
