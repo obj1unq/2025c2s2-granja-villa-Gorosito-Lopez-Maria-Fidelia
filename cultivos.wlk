@@ -9,6 +9,14 @@ class Maiz {
 	method crecer(){
 		estado = "adult"
 	}
+	method validarRecoleccion(){
+		if(estado == "baby"){
+			self.error("Aun no esta maduro el maiz")
+		}
+	}
+	method recolectar(){
+		game.removeVisual(self)
+	}
 
 }
 
@@ -24,6 +32,16 @@ class Trigo {
 		evolucion = evolucion + 1
 		}
 	}
+	method validarRecoleccion(){
+		if(evolucion < 2){
+			self.error("El trigo no esta lo suficientemente evolucionado para recogerlo")
+		}
+	}
+	method recolectar(){
+		self.validarRecoleccion()
+		game.removeVisual(self)
+	}
+
 }
 
 class Tomaco {
@@ -44,5 +62,9 @@ class Tomaco {
 			self.position(self.position().up(1))
 			game.addVisual(self)
 		}
+	}
+
+	method recolectar(){
+		game.removeVisual(self)
 	}
 }
