@@ -15,6 +15,7 @@ program farmville {
 	keyboard.o().onPressDo{personaje.sembrar( new Tomaco())}
 	keyboard.r().onPressDo{personaje.regar()}
 	keyboard.c().onPressDo{personaje.cosechar()}
+	keyboard.v().onPressDo{personaje.vender()}
 	//  VISUALES
  	game.addVisualCharacter(personaje)
  	
