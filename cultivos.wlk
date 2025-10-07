@@ -17,6 +17,9 @@ class Maiz {
 	method recolectar(){
 		game.removeVisual(self)
 	}
+	method valor(){
+		return 150
+	}
 
 }
 
@@ -40,6 +43,9 @@ class Trigo {
 	method recolectar(){
 		self.validarRecoleccion()
 		game.removeVisual(self)
+	}
+	method valor() {
+	  return (evolucion - 1) * 100
 	}
 
 }
@@ -66,5 +72,9 @@ class Tomaco {
 
 	method recolectar(){
 		game.removeVisual(self)
+	}
+
+	method valor() {
+	  return 80
 	}
 }
