@@ -5,7 +5,8 @@ object personaje {
 	const property image = "fplayer.png"
 	const cultivos = #{}
 	const plantasCosechadas = #{}
- 
+	var oroAcumulado = 0
+
 
 	method cultivoActual(){
 		return cultivos.find{cultivo => cultivo.position() == self.position()}
@@ -39,4 +40,8 @@ object personaje {
 	  }
 	}
 	
+	method vender(){
+		oroAcumulado = (plantasCosechadas.map{planta => planta.valor()}).sum()
+		plantasCosechadas.clear()
+	}
 }
