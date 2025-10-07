@@ -2,11 +2,22 @@ import wollok.game.*
 
 object personaje {
 	var property position = game.center()
-	const property image = "fplayer.png"
 	const cultivos = #{}
 	const plantasCosechadas = #{}
 	var oroAcumulado = 0
+	var genero = "f"
+	
+	method cambiarPersonaje(){
+		if (genero == "f"){
+			genero = "m"
+		}else{
+			genero = "f"
+		}
+	}//Podria estar mas bonito :p
 
+	method image(){
+		return genero + "player.png"
+	}
 
 	method cultivoActual(){
 		return cultivos.find{cultivo => cultivo.position() == self.position()}
