@@ -20,7 +20,9 @@ class Trigo {
 		return "wheat_" + evolucion + ".png"
 	}
 	method crecer(){
+		if(evolucion <= 2){
 		evolucion = evolucion + 1
+		}
 	}
 }
 
