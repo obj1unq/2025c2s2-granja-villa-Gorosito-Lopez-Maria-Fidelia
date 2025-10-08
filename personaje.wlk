@@ -28,6 +28,7 @@ object personaje {
 	}
 
 	method sembrar(cultivo){
+		self.validarCultivoParaSembrar()
 		cultivos.add(cultivo)
 		cultivo.position(self.position())
 		game.addVisual(cultivo)
@@ -48,6 +49,12 @@ object personaje {
 	method validarCultivo() {
 	  if((self.parcelasDondeHayCultivos().contains(self.position())).negate()){
 		self.error("No hay cultivo")
+	  }
+	}
+
+	method validarCultivoParaSembrar(){
+		if(self.parcelasDondeHayCultivos().contains(self.position())){
+		self.error("Ya hay un cultivo aca, no se puede sembrar otro")
 	  }
 	}
 	
