@@ -1,4 +1,15 @@
+import personaje.*
 import wollok.game.*
+
+
+class Aspersor{
+	var property position = game.at(0,0)
+	method image(){
+		return "aspersor.png"
+	}
+	
+}
+
 
 class Maiz {
 	var property position = game.at(0,0)

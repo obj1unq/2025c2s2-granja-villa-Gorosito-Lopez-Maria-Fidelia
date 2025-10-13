@@ -5,15 +5,11 @@ object personaje {
 	const cultivos = #{}
 	const plantasCosechadas = #{}
 	var oroAcumulado = 0
-	var genero = "f"
+	var property genero = "f"
 	
 	method cambiarPersonaje(){
-		if (genero == "f"){
-			genero = "m"
-		}else{
-			genero = "f"
-		}
-	}//Podria estar mas bonito :p
+		estado.cambiarPersonaje(self)
+	}
 
 	method image(){
 		return genero + "player.png"
@@ -69,4 +65,22 @@ object personaje {
 		game.say(self, "Tengo " + oroAcumulado +" monedas, y "+ plantasCosechadas.size() + " plantas para vender" )
 	}
 
+	method ponerAspersor(aspersor){
+		aspersor.position(self.position())
+		game.addVisual(aspersor)
+	}
+}
+
+
+object estado{
+	method esMujer(pj){
+		return pj.genero()== "f"
+	}
+	method cambiarPersonaje(persona){
+		if (self.esMujer(persona)){
+			persona.genero("m")
+		}else{
+			persona.genero("f")
+		}
+	}
 }

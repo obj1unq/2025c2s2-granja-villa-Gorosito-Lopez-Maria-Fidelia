@@ -9,16 +9,20 @@ program farmville {
 	game.width(10)
 	game.ground("ground.png")
 
+
 	//TECLADO
 	keyboard.m().onPressDo{personaje.sembrar( new Maiz())}
 	keyboard.t().onPressDo{personaje.sembrar( new Trigo())}
 	keyboard.o().onPressDo{personaje.sembrar( new Tomaco())}
+	keyboard.a().onPressDo{personaje.ponerAspersor(new Aspersor())}
 	keyboard.r().onPressDo{personaje.regar()}
 	keyboard.c().onPressDo{personaje.cosechar()}
 	keyboard.v().onPressDo{personaje.vender()}
 	keyboard.space().onPressDo{personaje.informar()}
 	keyboard.p().onPressDo{personaje.cambiarPersonaje()}
-
+	
+	//TICKS
+	game.onTick(1000, "regar", {new Aspersor().regarAlrededor()})
 	//  VISUALES
  	game.addVisualCharacter(personaje)
  	
