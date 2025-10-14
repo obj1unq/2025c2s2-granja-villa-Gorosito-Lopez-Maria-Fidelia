@@ -21,8 +21,6 @@ program farmville {
 	keyboard.space().onPressDo{personaje.informar()}
 	keyboard.p().onPressDo{personaje.cambiarPersonaje()}
 	
-	//TICKS
-	game.onTick(1000, "regar", {new Aspersor().regarAlrededor()})
 	//  VISUALES
  	game.addVisualCharacter(personaje)
  	

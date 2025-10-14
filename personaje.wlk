@@ -1,8 +1,9 @@
 import wollok.game.*
+import cultivos.*
 
 object personaje {
 	var property position = game.center()
-	const cultivos = #{}
+	var property  cultivos = #{}
 	const plantasCosechadas = #{}
 	var oroAcumulado = 0
 	var property genero = "f"
@@ -21,6 +22,7 @@ object personaje {
 
 	method parcelasDondeHayCultivos(){
 		return cultivos.map{cultivo => cultivo.position()}
+		
 	}
 
 	method sembrar(cultivo){
@@ -66,8 +68,9 @@ object personaje {
 	}
 
 	method ponerAspersor(aspersor){
-		aspersor.position(self.position())
+		aspersor.position(self.position()) 
 		game.addVisual(aspersor)
+		aspersor.regar()
 	}
 }
 
