@@ -18,6 +18,7 @@ object personaje {
 
 	method cultivoActual(){
 		return cultivos.find{cultivo => cultivo.position() == self.position()}
+		//Aca puedo no poner el findOrDefault ya que uso validaciones antes de preguntar por el cultivo actual 
 	}
 
 	method parcelasDondeHayCultivos(){
