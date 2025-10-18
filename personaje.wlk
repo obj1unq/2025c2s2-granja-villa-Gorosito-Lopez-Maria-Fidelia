@@ -39,8 +39,8 @@ object personaje {
 	}
 
 	method cosechar(){
-		plantasCosechadas.add(self.cultivoActual())
 		self.validarCultivo()
+		plantasCosechadas.add(self.cultivoActual())
 		self.cultivoActual().recolectar()
 		cultivos.remove(self.cultivoActual())
 	}

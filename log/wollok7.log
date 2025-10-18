@@ -1572,3 +1572,7 @@
 {"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mgame.farmville\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia\u001b[39m\u001b[23m","ok":true,"timeElapsed":329,"timestamp":"2025-10-18T01:58:43.912Z"}
 {"level":"info","message":"⌛ Building environment","timeElapsed":142,"timestamp":"2025-10-18T01:59:31.576Z"}
 {"level":"info","message":"⌛ Validating game.wpgm","timeElapsed":104,"timestamp":"2025-10-18T01:59:31.681Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed game.farmville on c:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia","timeElapsed":475239,"timestamp":"2025-10-18T02:06:38.821Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mgame.farmville\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia\u001b[39m\u001b[23m","ok":true,"timeElapsed":337,"timestamp":"2025-10-18T02:06:40.724Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed game.farmville on c:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia","timeElapsed":44782,"timestamp":"2025-10-18T02:07:25.168Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mgame.farmville\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\objetos\\2025c2s2-granja-villa-Gorosito-Lopez-Maria-Fidelia\u001b[39m\u001b[23m","ok":true,"timeElapsed":327,"timestamp":"2025-10-18T02:07:27.113Z"}
