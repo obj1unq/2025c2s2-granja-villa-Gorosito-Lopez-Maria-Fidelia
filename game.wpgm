@@ -1,14 +1,21 @@
 import wollok.game.*
 import personaje.*
 import cultivos.*
+import aspersor.*
+import mercados.*
 
 program farmville {
 	//  CONFIG	
+	
 	game.title("La granja")
 	game.height(10)
 	game.width(10)
 	game.ground("ground.png")
-
+	
+	const mercado1 = new Market(position = game.at(0, 5),
+								cantidadDeMonedas = 10000)
+    const mercado2 = new Market(position = game.at(5, 0),
+								cantidadDeMonedas = 0 )
 
 	//TECLADO
 	keyboard.m().onPressDo{personaje.sembrar( new Maiz())}
@@ -21,8 +28,14 @@ program farmville {
 	keyboard.space().onPressDo{personaje.informar()}
 	keyboard.p().onPressDo{personaje.cambiarPersonaje()}
 	
+	//COLISIONES
+	game.onCollideDo(mercado1, {pj => pj.venderA(mercado1)})
+	game.onCollideDo(mercado2, {pj => pj.venderA(mercado2)})
+
 	//  VISUALES
  	game.addVisualCharacter(personaje)
+	game.addVisual(mercado1)
+	game.addVisual(mercado2)
  	
  	//  COMIENZA
 	game.start()

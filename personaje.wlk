@@ -45,6 +45,10 @@ object personaje {
 		cultivos.remove(self.cultivoActual())
 	}
 
+	method cantidadDePlantasCosechadas(){
+		return plantasCosechadas.size()
+	}
+
 	method validarCultivo() {
 	  if((self.parcelasDondeHayCultivos().contains(self.position())).negate()){
 		self.error("No hay cultivo")
@@ -58,11 +62,34 @@ object personaje {
 	}
 	
 	method vender(){
-		oroAcumulado = oroAcumulado + (plantasCosechadas.map{planta => planta.valor()}).sum()
+		oroAcumulado = oroAcumulado + self.oroDePlantasCosechadas()
 		plantasCosechadas.clear()
 		game.say(self, "Vendi mis plantas recolectadas")
+		
 	}
 
+	method oroDePlantasCosechadas(){
+		return (plantasCosechadas.map{planta => planta.valor()}).sum()
+	}
+
+	method venderA(mercado){
+		self.validarSiCosechePlantas()
+		self.validarSiSePuedeVenderEn(mercado)
+		mercado.agregarMercaderia(plantasCosechadas)
+		self.vender()
+	}
+
+	method validarSiSePuedeVenderEn(mercado){
+		if (mercado.cantidadDeMonedas() < self.oroDePlantasCosechadas()){
+			self.error("Este mercado no tiene suficiente oro para comprar mis cosechas")
+		}
+	}
+
+	method validarSiCosechePlantas(){
+		if(self.cantidadDePlantasCosechadas() < 1  ){
+			self.error("Aun no coseche ninguna planta :( ")
+		}
+	}
 	method informar(){
 		//game.say(self , "algo")
 		game.say(self, "Tengo " + oroAcumulado +" monedas, y "+ plantasCosechadas.size() + " plantas para vender" )
